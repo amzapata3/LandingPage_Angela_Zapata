@@ -343,119 +343,127 @@ html, body {
 /* FOOTER */
 
 footer {
-    height: 500px;
+    
     width: 100%;
     background-color: black;
     margin-top: 300px;
+
+    .Negro {
+        display: grid; 
+        color: white;
+        width: 80%;
+        margin: auto;
+        align-items: center;
+        margin-bottom: 20px;
+        
+
+
+        .enlaces{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+
+            .medio{
+                justify-self: center;
+                
+            }
+
+            .ultima{
+                text-align: right;
+            }
+           
+
+            ul{
+                li{
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    .copy{
+        background-color: black;
+        border-top: solid 2px white;
+        width: 80%;
+        margin: auto;
+        
+        p{
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+            margin: 20px 0;
+        }
+    }
+
+    .gris{
+        
+        background-color: #333;
+        width: 80%;
+        margin: auto;
+        transform: translateY(-50%);
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+
+        .segunda{
+            display: grid;
+            padding: 100px;
+            gap: 10px;
+
+            input{
+                background-color: transparent;
+                border:solid 1px gray;
+                border-radius: 15px;
+                padding: 8px 15px;
+                
+            }
+
+            .btn2{
+                background-color: transparent;
+                border:solid 1px #df991b;
+                border-radius: 15px;
+                padding: 8px 15px;
+                color: #df991b;
+                width: 40%;
+                justify-self: end;
+                
+                
+            }
+
+
+
+            p{
+                margin-left: 20px;
+                color: white;
+                font-size: 20px;
+            }
+
+
+        }
+        
+
+        #text-footer{
+            font-size: 30px;
+            color:white;
+            justify-self: center;
+            
+
+            span{
+                color:#df991b;
+                font-size: 25px;
+
+            }
+
+        }
+
+    }
 }
 
-footer .Negro {
-    color: white;
-    display: grid;
-    width: 70%;
-    margin: 0 auto;
-}
-
-footer .Negro .enlaces {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    gap: 20px; /* Añade espacio entre las columnas */
-    text-align: center;
-    justify-items: center; /* Centra los elementos en cada columna */
-}
-
-footer .Negro .enlaces .primera2,
-footer .Negro .enlaces .centro1,
-footer .Negro .enlaces .centro2,
-footer .Negro .enlaces .ultima2 {
-    display: block; /* Asegura que cada uno ocupe su columna */
-    text-align: center; /* Centra el texto dentro de cada uno */
-    width: 100%; /* Asegura que el ancho de cada columna ocupe el 100% */
-}
-
-footer .Negro .enlaces ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-footer .copy {
-    background-color: black;
-    color: white;
-    text-align: center;
-    border-top: solid white;
-    width: 90%;
-    margin: auto;
-    margin-top: 20px;
-    padding: 10px;
-}
-
-footer .gris {
-    height: 300px;
-    background-color: #26282B;
-    width: 70%;
-    margin: auto;
-    transform: translateY(-50%);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-footer .gris #text-footer {
-    font-size: 30px;
-    color: white;
-    justify-self: center;
-    align-self: center;
-    margin-top: 10%;
-}
-
-footer .gris #text-footer span {
-    color: orange;
-}
-
-footer .gris .segunda {
-    display: grid;
-    font-size: 15px;
-    color: white;
-    justify-self: center;
-    align-self: center;
-    width: 80%;
-}
-
-footer .gris .segunda input {
-    background-color: transparent;
-    border: solid 1px gray;
-    border-radius: 25px;
-    padding: 10px 20px;
-}
-
-footer .gris .segunda .btn2 {
-    margin-top: 10px;
-    border: #df991b solid 1px;
-    border-radius: 25px;
-    width: 50%;
-    padding: 10px;
-    justify-self: end;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-footer .Negro .enlaces .centro {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas en el centro */
-    gap: 20px; /* Añade espacio entre las columnas */
-    text-align: center;
-    justify-items: center; /* Centra los elementos en cada columna */
-}
-
-footer .Negro .enlaces .centro1,
-footer .Negro .enlaces .centro2 {
-    display: block; /* Asegura que cada uno ocupe su columna */
-    text-align: center; /* Centra el texto dentro de cada uno */
-    width: 100%;
-}
 
 
-/* Media Queries combinadas para la imagen de fondo y la barra de navegación */
+/* Media Queries */
 @media (max-width: 768px) {
     
     /* Imagen de fondo */
@@ -468,8 +476,6 @@ footer .Negro .enlaces .centro2 {
     }
 
     }
-    
-
     
 
 /*MEDIA QUERYS DEBAJO DE LA BARRA NAV*/
@@ -601,77 +607,49 @@ footer .Negro .enlaces .centro2 {
     }
 }
 
-
-
-/*media querys para foooter*/
-/*Media querys para la zona gris*/
 @media (max-width: 768px) {
-    .gris {
-        display: none !important;
+    footer{
+        .gris{
+            display: none !important;
+
+        }
+
+
+        .Negro{
+            .enlaces{
+                grid-template-columns: repeat(2, 1fr);
+                .primera{
+                    grid-column: 2 span;
+                    justify-self: center;
+                    text-align: center;
+                }
+
+                .medio{
+                    justify-self: center;
+                    margin-top: 10px;
+                }
+
+                .ultima{
+                    grid-column: 2 span;
+                    margin-top: 20px;
+                    justify-self: center;
+                    text-align: center;
+                }
+            }
+
+        }
+
+        .copy{
+            display: none;
+        }
     }
 }
+
+
 
 /*media querys para zona negra*/
 
-@media (max-width: 768px) {
-    footer .Negro .enlaces {
-        grid-template-columns: 1fr;
-        margin-top: 30px;
-        gap: 20px;
-        height: 200px;
-        width: 100%;
-    }
 
-    footer .Negro .enlaces .primera2,
-    footer .Negro .enlaces .centro,
-    footer .Negro .enlaces .ultima2 {
-        text-align: center; /* Alinear todo al centro */
-    }
-
-    /* Asegurar que .centro tenga un layout flex y los elementos dentro de .centro estén al lado */
-    footer .Negro .enlaces .centro {
-        display: flex;
-        justify-content: space-between; /* Distribuye los elementos de manera que estén uno al lado del otro */
-        gap: 20px; /* Espaciado entre .centro1 y .centro2 */
-    }
-
-    footer .gris {
-        grid-template-columns: 1fr; /* Cambiar a una sola columna */
-        width: 90%; /* Ajustar el ancho */
-        margin: auto;
-    }
-
-    footer .gris #text-footer {
-        font-size: 25px; /* Ajustar tamaño de texto */
-        margin-top: 20px; /* Mejorar el espaciado */
-    }
-
-    footer .gris .segunda {
-        width: 100%; /* Asegurarse de que los formularios se ajusten bien */
-        padding: 20px 0; /* Espaciado para mejor apariencia */
-    }
-
-    footer .gris .segunda input,
-    footer .gris .segunda .btn2 {
-        width: 100%; /* Los botones y campos de entrada deben ocupar el 100% de ancho */
-        margin: 10px 0; /* Espaciado entre elementos */
-    }
-    
-    /* Ajustar la fuente de la clase .celular */
-    footer .Negro .enlaces .ultima2 .celular {
-        font-size: 30px; /* Aumentar el tamaño de la fuente */
-    }
-
-    /* Poner la clase .celular más cerca de .copy */
-    footer .Negro .enlaces .ultima2 {
-        margin-bottom: 0; /* Quitar el margen para acercar la clase .celular a .copy */
-    }
-
-    /* Ocultar la clase .call */
-    footer .Negro .enlaces .ultima2 .call {
-        display: none; /* Ocultar el elemento .call */
-    }
-}
 
 /*mediaquery copy*/
 @media (max-width: 768px) {
