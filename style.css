@@ -10,7 +10,7 @@ html, body {
 }
 
 .container-principal, .navegacion, .contenedor-body, .seccion, .Galeria2 {
-    max-width: 100% !important;
+    max-width: 100% ;
 }
 
 
@@ -124,7 +124,7 @@ html, body {
 /* Posicionar la lupa dentro del input */
 .lupa2 {
     position: absolute;
-    right: 15px; /* Mantiene la lupa dentro del input */
+    right: 15px; 
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -201,7 +201,7 @@ html, body {
 
 .seccion .Galeria img {
     width: 100%;
-    height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: 100%; 
     object-fit: cover;
 }
 
@@ -287,7 +287,7 @@ html, body {
 }
 
 .ultima .Textos h6 {
-    font-size: 2rem; /* Tamaño grande para el h6 */
+    font-size: 2rem; 
 }
 
 
@@ -296,6 +296,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    margin-top: 30px;
 }
 
 .lux, .dev {
@@ -338,6 +339,8 @@ html, body {
 .textos h3, .textos p {
     margin: 0;
 }
+
+
 
 
 /* FOOTER */
@@ -584,6 +587,7 @@ footer {
         grid-template-columns: 1fr; /* Una sola columna */
         gap: 10px;
         
+        
     }
 
     .item {
@@ -594,15 +598,13 @@ footer {
     }
 
     .item img {
-        width: 80%; /* Ajusta el tamaño de las imágenes */
+        width: 80%; 
+       margin-top: 10px;
     }
 
     .textos {
-        position: static;
-        transform: none;
-        background: none;
-        color: black;
-        text-align: center;
+        display: none;
+       
         
     }
 }
@@ -650,13 +652,10 @@ footer {
 /*media querys para zona negra*/
 
 
-
 /*mediaquery copy*/
 @media (max-width: 768px) {
+    
     footer .copy {
-        border-top: none; /* Quitar la línea superior */
-    }
-    footer .copy {
-        display: none; /* Quitar la línea superior */
+        display: none; 
     }
 }
